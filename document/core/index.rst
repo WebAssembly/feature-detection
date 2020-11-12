@@ -3,7 +3,7 @@ WebAssembly Specification
 
 .. only:: html
 
-   | Release |release| (Draft, |today|)
+   | Release |release| + feature-detection (Draft, |today|)
 
    | Editor: Andreas Rossberg
 
