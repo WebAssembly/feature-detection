@@ -93,3 +93,9 @@ proposal and any follow-on SIMD proposals. Whether it would be useful to
 allocate feature bits to other proposals such as [bulk memory
 operations](https://github.com/WebAssembly/bulk-memory-operations) is not known
 and needs to be investigated.
+
+### FAQ
+
+#### Why resolve these instructions during decoding? ([#2](https://github.com/WebAssembly/feature-detection/issues/2))
+
+Adding `feature_block` to the AST would involve inserting arbitrary bytes into the AST and having validation call back into decoding. It's much cleaner to keep the phases separate and resolve `feature_block` (and `features.supported`) during the original decoding.
